@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="fonts" href="fonts/Pacifico,Poppins,Ubuntu/Pacifico/Pacifico-Regular.ttf">
+    <link rel="stylesheet" href="style.css/style.css">
+    <link rel="stylesheet" href="style.css/header-style.css">
+    <meta name="view-transition" content="same-origin" />
+    <title>Yummy</title>
+</head>
+
+<body>
+    <div id="preloader">
+        <h2>Yummy</h2>
+    </div>
+    <header>
+        <nav class="navigation">
+            <h1><a href="index.html">Yummy<span>.ge</span></a></h1>
+            <ul>
+                <li class="list">
+                    <a href="index.html">
+                        <span class="icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="login.html">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="prod.html">
+                        <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                        <span class="text">Products</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="chat.html">
+                        <span class="icon"><i class="fa-brands fa-rocketchat"></i></span>
+                        <span class="text">Chat</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="text">Favourite</span>
+                    </a>
+                </li>
+                <li>
+                    <p id="switch" onclick="Switch_Function()"><i class="fa-solid fa-sun"></i></p>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+
+            <p><a href="about.html" id="another_a">About Yummy</a></p>
+            <p class="logout" type="button" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i></p>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome">
+            <input type="file" id="image-upload">
+            <div class="user-avatar">
+                <img src="img/55.jpg" id="avatar">
+            </div>
+            <div>
+                <h3 class="welcome-text">Welcome</h3>
+                <table>
+                    <tr>
+                        <td>Name: </td>
+                        <td>
+                            <script>
+                                document.write(localStorage.getItem("name"));
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td>
+                            <script>
+                                document.write(localStorage.getItem("email"));
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <button class="open-box-btn" type="button" onclick="location.href = 'chat.html'">
+            <i class="fa-solid fa-message"></i>
+        </button>
+    </main>
+    <br><br><br><br><br><br>
+    <footer>
+        <span id="footer_logo">
+            <span class="yummy_text"></span>
+        </span>
+        <div class="flex">
+            <section>
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li><a href="#">Delivery Info</a></li>
+                    <li><a href="#">Stores</a></li>
+                    <li><a href="#">Employment</a></li>
+                    <li><a href="#">Browse</a></li>
+                    <li><a href="#">On Sale</a></li>
+                </ul>
+            </section>
+            <section>
+                <h4>WHY YUMMY?</h4>
+                <ul>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                    <li><a href="#">Roomservice</a></li>
+                    <li><a href="#">Passport</a></li>
+                    <li><a href="#">Pickup</a></li>
+                </ul>
+            </section>
+            <section>
+                <h4>HELP</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help/FAQ</a></li>
+                    <li><a href="#">Stores</a></li>
+                    <li><a href="#">Share Feedback</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </section>
+            <div class="flex">
+                <img src="img/card_1.svg" width="400px">
+                <br>
+                <img src="img/card_2.svg" width="400px">
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>
+                <a href="#">Created by
+                    <abbr title="Sweet Little Mouse">
+                        <span>S</span>
+                        <span>L</span>
+                        <span>M</span>
+                    </abbr>
+                </a>
+            </p>
+        </div>
+        <p>Copyright 2024 &copy; Yummy.ge</p>
+    </footer>
+    <span id="back-to-top">
+        <span class="arrow-up"><i class="fa-solid fa-arrow-up"></i></span>
+    </span>
+    <script src="js/backToTop.js"></script>
+    <script src="js/light-dark.js"></script>
+    <script src="js/password=eye.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/avatar.js"></script>
+    <script src="js/loader.js"></script>
+    <!--  -->
+    <script src="https://kit.fontawesome.com/f3bc6e5cae.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

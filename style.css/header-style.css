@@ -1,0 +1,35 @@
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(calc(70px * 4));
+}
+.navigation ul li:nth-child(6).active ~ .indicator
+{
+    transform: translateX(calc(200px * 5));
+}
+.indicator
+{
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: var(--blue-clr);
+    border-radius: 50%;
+    border: 6px solid var(--white-clr);
+    transition: 0.5s;
+}

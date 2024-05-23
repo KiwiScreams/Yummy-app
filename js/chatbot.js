@@ -5,8 +5,9 @@ let userMessage;
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", className);
-    let chatContent = className === "outgoing" ? `<p>${message}</p>` : `<i class="fa-solid fa-robot"></i><p>${message}</p>`;
+    let chatContent = className === "outgoing" ? `<p></p>` : `<i class="fa-solid fa-robot"></i><p></p>`;
     chatLi.innerHTML = chatContent;
+    chatLi.querySelector("p").textContent = message;
     return chatLi;
 }
 const HandleChat = () => {
@@ -14,21 +15,27 @@ const HandleChat = () => {
     console.log(userMessage);
     if (!userMessage) return;
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
-    if (userMessage == "hello" || userMessage == "hi") {
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    if (userMessage.includes("hel") || userMessage == "hi") {
         chatbox.appendChild(createChatLi("hello... how can I help you?", "iscoming"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
     }
-    else if (userMessage == "bye" || userMessage == "goodbye" || userMessage == "bye bye") {
+    else if (userMessage.includes("bye") || userMessage == "goodbye") {
         chatbox.appendChild(createChatLi("Goodbye", "iscoming"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
     }
-    else if (userMessage == "how are you?" || userMessage == "how are things going?" || userMessage == "how are you doing?") {
+    else if (userMessage.includes("how are")) {
         chatbox.appendChild(createChatLi("I'm a bot, I have no feelings. so how can I help you?", "iscoming"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
     }
     else if (userMessage == "okay" || userMessage == "ok" || userMessage == "okey") {
         chatbox.appendChild(createChatLi("...", "iscoming"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
     }
     else {
         setTimeout(() => {
             chatbox.appendChild(createChatLi("I can't recognize it, try it another time...", "iscoming"));
+            chatbox.scrollTo(0, chatbox.scrollHeight);
         }, 600);
     }
 }
